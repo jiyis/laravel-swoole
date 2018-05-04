@@ -1,0 +1,55 @@
+{
+    "name": "jiyis/laravel-swoole",
+    "description": "Speed up laravel framework with swoole.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "dongpengfei",
+            "email": "425995717@qq.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/console": "~5.4",
+        "illuminate/contracts": "~5.4",
+        "illuminate/http": "~5.4",
+        "illuminate/support": "~5.4"
+    },
+    "require-dev": {
+        "laravel/lumen-framework": "~5.4",
+        "phpunit/phpunit": "^6.1",
+        "mockery/mockery": "~1.0",
+        "codedungeon/phpunit-result-printer": "^0.14.0"
+    },
+    "suggest": {
+        "ext-swoole": "Production-Grade Async programming Framework for PHP, require >= 1.7.19.",
+        "ext-inotify": "Inotify, used to reload all worker processes when your code is modified."
+    },
+    "autoload": {
+        "psr-4": {
+          "Jiyis\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jiyis\\Illuminate\\Tests\\": "tests",
+            "Jiyis\\Illuminate\\Tests\\Fixtures\\Laravel\\App\\": "tests/fixtures/laravel/app"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jiyis\\LaravelServiceProvider"
+            ],
+            "aliases": {
+                "Server": "Jiyis\\Illuminate\\Facades\\Server",
+                "Table": "Jiyis\\Illuminate\\Facades\\Table",
+                "Room": "Jiyis\\Illuminate\\Websocket\\Facades\\Room",
+                "Websocket": "Jiyis\\Illuminate\\Websocket\\Facades\\Websocket"
+            }
+        }
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}
